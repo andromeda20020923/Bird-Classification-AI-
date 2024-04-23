@@ -2,9 +2,10 @@ import streamlit as st
 from fastai.vision.all import *
 import pathlib
 import plotly.express as px
-temp= pathlib.PosixPath
-pathlib.PosixPath=pathlib.WindowsPath
-
+import platform
+plt=platform,system()
+if plt=='Linux':pathlib.WindowsPath=pathlib.PosixPAth
+    
 st.title('Qushlarni Klassifikatsiya qiluvchi model')
 file=st.file_uploader('Rasmni yuklash',type=['png','jpg','jpeg','gif','svg'])
 if file:
